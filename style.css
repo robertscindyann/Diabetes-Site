@@ -161,7 +161,6 @@ h4 {
   opacity: 1;
 }
 #wrapper {
-  /* max-width: 1280px; Desktop Display*/
   max-width: 647px;
   min-width: 380px;
   margin: 0 auto;
@@ -348,10 +347,11 @@ main img {
 #whatIsDiabetes button {
   background-color: var(--orange);
   border: none;
-  border-radius: 3px;
-  padding: 12px 22px;
+  border-radius: 10px;
+  padding: 20px 40px;
   color: #fff;
   margin: 16px 0 30px 35px;
+  cursor: pointer;
 }
 
 #foodIntoEnergy img {
@@ -382,6 +382,8 @@ main img {
 #pancreas img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
+
   margin: 40px 0 15px;
 }
 #pancreas h3 {
@@ -409,7 +411,11 @@ iframe {
   margin: 6px 0 30px;
   padding: 0 35px;
 }
-
+#preventDiabetes {
+  margin-bottom: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
 #preventDiabetes img {
   max-width: 100%;
   margin-bottom: 15px;
@@ -422,7 +428,7 @@ iframe {
 }
 #preventDiabetes p {
   padding: 0 34px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #preventDiabetes button {
@@ -500,11 +506,6 @@ footer img {
   display: block;
   margin: 0 auto;
 }
-address {
-  color: #fff;
-  font-size: 0.67rem;
-  margin-bottom: 5px;
-}
 
 #contactUs {
   color: #fff;
@@ -532,9 +533,9 @@ address {
   column-gap: 25px;
   max-width: 15%;
 }
-/**************************/
+
 /****SUPERFOODS SECTION ***/
-/**************************/
+
 #superfoodsContainer {
   margin: 0 34px;
 }
@@ -609,9 +610,7 @@ address {
   margin-bottom: 15px;
 }
 
-/**************************/
 /**** EXERCISE SECTION ***/
-/**************************/
 
 #exerciseContainer {
   margin: 0 34px 30px;
@@ -635,9 +634,8 @@ address {
   padding: 13px 0 9px;
 }
 
-/**************************/
 /**** RESOURCES SECTION ***/
-/**************************/
+
 #resourcesWrapper {
   margin: 0 34px;
 }
@@ -658,9 +656,7 @@ address {
   padding-bottom: 10px;
 }
 
-/**************************/
 /****** MEDIA QUERIES *****/
-/**************************/
 
 @media (min-width: 1000px) {
   #brandWrapper {
@@ -694,6 +690,8 @@ address {
   }
 
   header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
     justify-content: space-between;
     align-items: center;
   }
@@ -705,9 +703,7 @@ address {
     margin-bottom: 20px;
   }
   #wrapper {
-    /* max-width: 1280px; Desktop Display*/
-    max-width: 1047px;
-    /* min-width: 430px; */
+    max-width: 1047px; /* Desktop Display */
     margin: 0 auto;
   }
   main img {
@@ -721,7 +717,14 @@ address {
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: 1000;
-    margin-top: 252.6px;
+    margin-top: 178px; /* consolidated */
+  }
+
+  main {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
   }
   main p {
     color: #fff;
@@ -729,7 +732,7 @@ address {
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: 100;
-    margin-top: 291px;
+    margin-top: 216.4px;
   }
   picture {
     grid-column: 1/-1;
@@ -754,52 +757,39 @@ address {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
   }
-
-  /**************************/
+  #whatIsDiabetes h2 {
+    margin-left: 0;
+  }
+  #whatIsDiabetes h3 {
+    margin-left: 0;
+  }
+  #whatIsDiabetes h4 {
+    margin-left: 0;
+  }
+  #whatIsDiabetes p {
+    padding-left: 0;
+  }
+  #effectsOfDiabetes {
+    margin: 0;
+  }
   /*** SUPERFOODS SECTION ***/
-  /**************************/
-
   #superfoods h1 {
     margin-top: 0;
   }
 
-  /**************************/
   /*** EXERCISE SECTION ***/
-  /**************************/
   #exercise h1 {
     margin-top: 0;
   }
-}
 
-@media (min-width: 1000px) {
-  #wrapper {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, auto); */
-  }
-  header {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-  }
-  h1 {
-    margin-top: 178px;
-  }
-  main {
-    grid-column: 1/-1;
-    grid-row: 2/3;
-    margin-bottom: 30;
-    padding-bottom: 20px;
-  }
-  main p {
-    margin-top: 216.4px;
-  }
-
+  /*** ICONS SECTION ***/
   .icons {
     display: flex;
-
     justify-content: space-between;
     gap: 30px;
   }
+
+  /*** FOOD INTO ENERGY SECTION ***/
   #foodIntoEnergy {
     grid-column: 1/-1;
     grid-row: 5/6;
@@ -807,35 +797,32 @@ address {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 2rem;
-    align-items: none;
+
     margin-bottom: 50px;
     margin-top: 10px;
     border: 0.8px solid var(--grey);
     box-shadow: 0 8px 6px -6px var(--grey);
     border-radius: 8px;
   }
+  #foodIntoEnergy h3 {
+    margin: 15px 10px 5px 10px;
+  }
   #foodIntoEnergy h4 {
+    padding: 5px 10px;
+    font-size: 1.1rem;
     margin-left: 0;
+  }
+  #foodIntoEnergy p {
+    padding: 0 25px 0 10px;
   }
   .imageSize {
     width: 600px;
     height: auto;
     object-fit: contain;
   }
-  #foodIntoEnergy h3 {
-    margin: 15px 10px 5px 10px;
-  }
-  #foodIntoEnergy h4 {
-    padding: 5px 10px;
 
-    font-size: 1.1rem;
-  }
-
-  #foodIntoEnergy p {
-    padding: 0 25px 0 10px;
-  }
+  /*** BROKEN DOWN PROTEINS SECTION ***/
   #brokenDownProteins {
     grid-column: 1/-1;
   }
@@ -847,19 +834,19 @@ address {
     margin: 0;
     padding-left: 35px;
   }
+
+  /*** PANCREAS SECTION ***/
   #pancreas {
     display: flex;
     height: 250px;
     gap: 2rem;
     margin-bottom: 20px;
-    /* grid-column: 2/-1; */
   }
   #pancreas-img img {
     width: 1000px;
     height: auto;
     margin: 0 0 25px;
   }
-
   #pancreas h3 {
     margin-left: 0;
   }
@@ -868,11 +855,11 @@ address {
     margin: 6px 0 10px;
   }
 
+  /*** INSULIN RESISTANCE SECTION ***/
   #insulinResistance {
     grid-column: 2/-1;
     grid-row: 2/-1;
   }
-
   #insulinResistance h3 {
     margin-left: 0;
     margin-bottom: 0;
@@ -881,9 +868,12 @@ address {
     padding: 0 10px 0 0;
   }
 
+  /*** VIDEO ***/
   #video-container iframe {
     width: 600px;
   }
+
+  /*** EFFECTS + PREVENT SECTIONS ***/
   #effectsOfDiabetes {
     grid-column: 1/-1;
     grid-row: 7/8;
@@ -891,34 +881,32 @@ address {
   #preventDiabetes {
     grid-column: 1/-1;
     grid-row: 6/7;
-  }
-  #preventDiabetes img {
-    padding-top: 20px;
-  }
-  footer {
-    grid-column: 1/-1;
-    grid-row: 8/-1;
-  }
-  #preventDiabetes h2,
-  #preventDiabetes p {
-    color: #fff;
-  }
-  #preventDiabetes h2 {
-    padding-top: 30px;
-  }
-  #preventDiabetes button {
-    background-color: transparent;
-    border: 1px solid#fff;
-  }
 
-  #preventDiabetes {
-    background-color: var(--orange);
     margin-bottom: 30px;
     padding-top: 25px;
   }
   #preventDiabetes img {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    max-width: 100%;
+    padding-top: 20px;
+  }
+  #preventDiabetes p {
+    color: var(--grey);
+  }
+  #preventDiabetes h2 {
+    padding-top: 30px;
+  }
+  #preventDiabetes button {
+    background-color: var(--orange);
+
+    border-radius: 10px;
+    padding: 20px 40px;
+    cursor: pointer;
+  }
+
+  footer {
+    grid-column: 1/-1;
+    grid-row: 8/-1;
   }
 }
