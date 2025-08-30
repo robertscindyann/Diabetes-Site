@@ -163,7 +163,7 @@ h4 {
 #wrapper {
   /* max-width: 1280px; Desktop Display*/
   max-width: 647px;
-  min-width: 430px;
+  min-width: 380px;
   margin: 0 auto;
 }
 header {
@@ -435,8 +435,20 @@ iframe {
 }
 .icons {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.kidney {
+  grid-column: 1/2;
+}
+.thirsty {
+  grid-column: 2/-1;
+}
+.bathroomFrequency {
+  grid-column: 1/2;
+}
+.feelingTired {
+  grid-column: 2/-1;
 }
 #effectsOfDiabetes {
   display: grid;
@@ -475,22 +487,6 @@ iframe {
   text-align: center;
 }
 
-.kidney {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.thirsty {
-  grid-column: 2/-1;
-  grid-row: 3/4;
-}
-.bathroomFrequency {
-  grid-column: 1/2;
-  grid-row: 4/-1;
-}
-.feelingTired {
-  grid-column: 2/-1;
-  grid-row: 4/-1;
-}
 footer {
   background-color: var(--orange);
   text-align: center;
