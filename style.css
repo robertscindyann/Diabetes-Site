@@ -502,6 +502,9 @@ footer {
   text-align: center;
   padding-bottom: 15px;
 }
+footer p {
+  color: #fff;
+}
 #logoComponent {
   padding: 15px 0 5px 22px;
 }
