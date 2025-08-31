@@ -344,16 +344,20 @@ main img {
 #whatIsDiabetes p:nth-child(2) {
   margin-bottom: 10px;
 }
-#whatIsDiabetes button {
-  background-color: var(--orange);
-  border: none;
-  border-radius: 10px;
-  padding: 20px 40px;
-  color: #fff;
-  margin: 16px 0 30px 35px;
-  cursor: pointer;
-}
 
+.btn {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 20px 40px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 16px 0 30px 35px;
+}
+.btn:hover {
+  background: #e65c00;
+}
 #foodIntoEnergy img {
   display: block;
   max-width: 100%;
