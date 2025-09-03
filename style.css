@@ -160,7 +160,7 @@ h4 {
   transform: translateX(-50%);
   opacity: 1;
 }
-#wrapper {
+.wrapper {
   max-width: 647px;
   min-width: 380px;
   margin: 0 auto;
@@ -506,20 +506,24 @@ iframe {
 
 footer {
   background-color: var(--orange);
-  text-align: center;
   padding-bottom: 15px;
+  text-align: center;
 }
 footer p {
   color: #fff;
 }
 #logoComponent {
-  padding: 15px 0 5px 22px;
+  width: 250px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
 }
-footer img {
+/* footer img {
   width: 35%;
   display: block;
   margin: 0 auto;
-}
+  text-align: center;
+} */
 
 #contactUs {
   color: #fff;
@@ -716,7 +720,7 @@ footer img {
     grid-template-rows: 1fr;
     margin-bottom: 20px;
   }
-  #wrapper {
+  .wrapper {
     max-width: 1047px; /* Desktop Display */
     margin: 0 auto;
   }
