@@ -178,9 +178,10 @@ header {
   display: flex;
   justify-content: space-around;
 }
-#brandWrapper {
+.headerLogo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logoShape {
@@ -216,11 +217,16 @@ header {
   margin-bottom: 2.5px;
   border-radius: 15px;
 }
-#logo {
+header p {
+  color: #fff;
+}
+header .logoShape {
+}
+/* #logo {
   font-size: 1.25rem;
   color: #fff;
   text-decoration: none;
-}
+} */
 [type="checkbox"] {
   width: 60px;
   opacity: 0;
@@ -509,21 +515,20 @@ footer {
   padding-bottom: 15px;
   text-align: center;
 }
-footer p {
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.footer-logo p {
   color: #fff;
 }
-#logoComponent {
-  width: 250px;
-  display: block;
-  margin: 30px auto;
-  text-align: center;
+.copyright p {
+  color: #fff;
+  font-size: 0.77rem;
 }
-/* footer img {
-  width: 35%;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-} */
 
 #contactUs {
   color: #fff;
@@ -678,6 +683,9 @@ footer p {
 
 @media (min-width: 1000px) {
   #brandWrapper {
+    margin-left: 30px;
+  }
+  .headerLogo {
     margin-left: 30px;
   }
   #hamburgerWrapper {
