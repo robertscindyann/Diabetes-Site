@@ -164,7 +164,14 @@ h4 {
   max-width: 647px;
   min-width: 380px;
   margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+main {
+  flex: 1;
+}
+
 header {
   background-color: var(--orange);
   height: 74px;
