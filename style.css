@@ -220,13 +220,9 @@ header {
 header p {
   color: #fff;
 }
-header .logoShape {
-}
-/* #logo {
-  font-size: 1.25rem;
-  color: #fff;
+header a {
   text-decoration: none;
-} */
+}
 [type="checkbox"] {
   width: 60px;
   opacity: 0;
